@@ -1,0 +1,61 @@
+#!/usr/bin/python2
+# -*- coding: utf-8 -*-
+
+from __future__ import division
+from scipy import *
+from pylab import *
+import sys
+
+if (len(sys.argv) < 2 or len(sys.argv) > 3):
+    print "USAGE : ./106bombyx k (k <= 4 && k >= 1)\n or"
+    print "USAGE : ./106bombyx imin imax (0 <= imin < imax)"
+    sys.exit()
+
+def func_k(k):
+    i = 1
+    n = 10
+    x = []
+    y = []
+    x.append(i)
+    y.append(n)
+    while (i <= 100):
+        n = k * n * ((1000 - n) / 1000)
+        x.append(i)
+        y.append(n)
+        i += 1
+    plot(x, y)
+    xlabel(ur"i", fontsize=20)
+    ylabel(ur"X(i)", fontsize=20)
+
+def func_i(imin,imax):
+    x = []
+    y = []
+    k = 0
+    float(k)
+    while(k <= 4):
+        i = imin
+        n = 10
+        x.append(k)
+        y.append(n)
+        while (i <= imax):
+            n = k * n * ((1000 - n) / 1000)
+            x.append(k)
+            y.append(n)
+            i += 1
+        k += 0.01
+    plot(x, y)
+    xlabel(ur"k", fontsize=20)
+    ylabel(ur"X(i)", fontsize=20)
+
+if (len(sys.argv) == 2):
+    k = sys.argv[1]
+    func_k(float(k))
+elif (len(sys.argv) == 3):
+    imin = sys.argv[1]
+    imax = sys.argv[2]
+    func_i(float(imin), float(imax))
+
+fig = gcf()
+fig.canvas.set_window_title('PAPILLOOOOOOOOOONNNNNNNNNNNNNNN')
+title(u"Bombyx", fontsize=16)
+show()
