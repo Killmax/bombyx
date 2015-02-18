@@ -1,5 +1,13 @@
 #!/usr/bin/python2
 # -*- coding: utf-8 -*-
+## 106bombyx.sh for 106bombyx in /home/brugue_m/rendu/106bombyx
+## 
+## Made by bruguet Maxime
+## Login   <brugue_m@epitech.net>
+## 
+## Started on  Wed Feb 18 14:54:19 2015 bruguet Maxime
+##
+
 
 from __future__ import division
 from scipy import *
