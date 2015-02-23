@@ -13,8 +13,9 @@ L’évolution du nombre de bombyx d’une génération sur l’autre n’est do
 en appelant x i le nombre de papillons à la i ème génération, le nombre de papillons est
 modélisé ainsi :
 
-x1 = 10\n
-x(i + 1) = k * x(i) * ((1000 - x(i))/1000) pour i >= 1\n
+x1 = 10
+
+x(i + 1) = k * x(i) * ((1000 - x(i))/1000) pour i >= 1
 
 k est appelé le taux de croissance, et varie de 1 à 4.
 Afin de pouvoir étudier cette évolution, on vous demande de tracer la courbe du nombre
